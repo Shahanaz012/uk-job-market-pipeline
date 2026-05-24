@@ -28,4 +28,10 @@ def clean_data(title):
         return title
 df["title"] = df["title"].apply(clean_data)
 
+def clean_location(location):
+    if location == "UK":
+        return "Not Specified"
+    else:
+        return location
+df["location"] = df["location"].apply(clean_location)
 print(df.head())
